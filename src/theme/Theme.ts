@@ -26,4 +26,9 @@ export const Theme: DefaultTheme = {
     fontWeightMedium: '600',
     fontWeightBold: '700',
   },
+
+  device: {
+    isMobile: false,
+    isTabletAndDesktop: false,
+  },
 };

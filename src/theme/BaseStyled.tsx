@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 import Background from 'images/PNG/Background.png';
 
@@ -8,6 +8,13 @@ const ResetStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.typography.fontFamily};
 
     background-image: url(${Background});
+    background-position-x: -850px;
+
+    ${(props) =>
+      props.theme.device.isTabletAndDesktop &&
+      css`
+        background-position: unset;
+      `}
   }
 
  * {
