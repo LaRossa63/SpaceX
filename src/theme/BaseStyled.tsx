@@ -1,11 +1,14 @@
 import { FC, PropsWithChildren } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
+import Background from 'images/PNG/Background.png';
+
 const ResetStyle = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.typography.fontFamily};
-  }
 
+    background-image: url(${Background});
+  }
 
  * {
     padding: 0px;
