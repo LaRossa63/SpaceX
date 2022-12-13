@@ -1,6 +1,7 @@
 import { Navigate, useRoutes } from 'react-router-dom';
 
 import { AppRoutes } from 'types/types';
+import { Layout } from 'layout';
 import {
   Main,
   Technologies,
@@ -12,6 +13,7 @@ import {
 
 export const AppRouter = () => {
   const routes = {
+    element: <Layout />,
     children: [
       { path: AppRoutes.MAIN, element: <Main /> },
       { path: AppRoutes.TECHNOLOGIES, element: <Technologies /> },
