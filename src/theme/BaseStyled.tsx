@@ -2,6 +2,10 @@ import { FC, PropsWithChildren } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
 const ResetStyle = createGlobalStyle`
+  body {
+    font-family: ${(props) => props.theme.typography.fontFamily};
+  }
+
 
  * {
     padding: 0px;

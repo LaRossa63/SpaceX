@@ -19,7 +19,7 @@ export const Theme: DefaultTheme = {
   },
 
   typography: {
-    fontFamily: '',
+    fontFamily: '"Museo Sans Cyrl", sans-serif',
 
     fontWeightLight: '300',
     fontWeightRegular: '400',
