@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 
-import { Title } from 'images/SVG';
 import { NavLink } from 'react-router-dom';
 import { AppRoutes } from 'types/types';
+
+import { Title } from 'images/SVG';
 
 const Container = styled.div`
   padding: 10px;
