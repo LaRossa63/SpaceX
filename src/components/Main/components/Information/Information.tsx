@@ -30,12 +30,14 @@ const ListItem = styled.li`
 
 const Text = styled.p<{ upperCase?: boolean }>`
   text-align: center;
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
   color: ${(props) => props.theme.pallette.common.white};
 
   ${(props) =>
     props.upperCase &&
     css`
       font-size: 38px;
+      font-weight: ${(props) => props.theme.typography.fontWeightBold};
 
       padding-top: 10px;
     `}

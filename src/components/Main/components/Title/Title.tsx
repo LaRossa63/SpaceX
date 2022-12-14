@@ -9,28 +9,32 @@ const ContainerTitle = styled.div`
   margin-top: 20px;
 `;
 
-const MyTitle = styled.p<{ upperCase?: boolean }>`
+const Text = styled.h3`
   width: 100%;
 
   font-weight: ${(props) => props.theme.typography.fontWeightLight};
   color: transparent;
 
-  background: linear-gradient(186deg, #fff, #ff5719);
+  background: linear-gradient(-202deg, #fff, #ff5719);
   background-clip: text;
   -webkit-background-clip: text;
 
   ${(props) =>
     props.theme.device.isTabletAndDesktop &&
     css`
-      font-size: 22px;
+      font-size: 30px;
     `}
+`;
+
+const TextBolt = styled(Text)`
+  font-size: 38px;
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
+  text-transform: uppercase;
 
   ${(props) =>
-    props.upperCase &&
+    props.theme.device.isTabletAndDesktop &&
     css`
-      font-size: 38px;
-      font-weight: ${(props) => props.theme.typography.fontWeightMedium};
-      text-transform: uppercase;
+      font-size: 62px;
     `}
 `;
 
@@ -65,8 +69,8 @@ export const Title = () => {
   return (
     <div>
       <ContainerTitle>
-        <MyTitle upperCase>путешествие</MyTitle>
-        <MyTitle>на красную планету</MyTitle>
+        <TextBolt>путешествие</TextBolt>
+        <Text>на красную планету</Text>
       </ContainerTitle>
 
       <ContainerButton>

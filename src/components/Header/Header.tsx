@@ -19,11 +19,12 @@ const Container = styled.div`
 
 const ContainerContent = styled.div`
   width: 100%;
-  max-width: 1110px;
+  max-width: 1500px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 
   margin: 0 auto;
 
