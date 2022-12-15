@@ -7,16 +7,6 @@ declare module 'styled-components' {
         black: string;
         white: string;
       };
-
-      background: {
-        default: string;
-        button: string;
-      };
-
-      text: {
-        primary: string;
-        secondary: string;
-      };
     };
 
     typography: {

@@ -39,10 +39,45 @@ const TextBolt = styled(Text)`
 `;
 
 const ContainerButton = styled.div`
+  width: fit-content;
+
   display: flex;
   justify-content: center;
 
   margin-top: 25px;
+
+  background: linear-gradient(
+        to right,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      0 0 / 100% 2px no-repeat,
+    linear-gradient(
+        to right,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      0 100% / 100% 2px no-repeat,
+    linear-gradient(
+        to bottom,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      0 0 / 2px 100% no-repeat,
+    linear-gradient(
+        to bottom,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      100% 0 / 2px 100% no-repeat;
 
   ${(props) =>
     props.theme.device.isTabletAndDesktop &&

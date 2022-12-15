@@ -1,9 +1,8 @@
 import styled, { css } from 'styled-components';
-
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AppRoutes } from 'types/types';
 
-import { Title } from 'images/SVG';
+import { Logo } from 'images/SVG';
 
 const Container = styled.div`
   padding: 10px;
@@ -13,7 +12,7 @@ const Container = styled.div`
   ${(props) =>
     props.theme.device.isTabletAndDesktop &&
     css`
-      padding: 50px 10px;
+      padding: 40px 10px;
     `}
 `;
 
@@ -34,6 +33,43 @@ const ContainerContent = styled.div`
       flex-direction: row;
       justify-content: space-between;
     `}
+`;
+
+const ContainerLogo = styled.div`
+  padding: 10px 20px;
+
+  background: linear-gradient(
+        to right,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      0 0 / 100% 2px no-repeat,
+    linear-gradient(
+        to right,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      0 100% / 100% 2px no-repeat,
+    linear-gradient(
+        to bottom,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      0 0 / 2px 100% no-repeat,
+    linear-gradient(
+        to bottom,
+        #fff 10px,
+        transparent 0,
+        transparent calc(100% - 10px),
+        #fff 0
+      )
+      100% 0 / 2px 100% no-repeat;
 `;
 
 const ContainerNavigation = styled.nav`
@@ -69,12 +105,18 @@ const TextNavigation = styled(NavLink)`
 `;
 
 export const Header = () => {
+  const navigation = useNavigate();
+
+  const handleClickLogo = () => {
+    navigation(AppRoutes.MAIN);
+  };
+
   return (
     <Container>
       <ContainerContent>
-        <div>
-          <Title />
-        </div>
+        <ContainerLogo onClick={handleClickLogo}>
+          <Logo />
+        </ContainerLogo>
 
         <ContainerNavigation>
           <TextNavigation to={AppRoutes.MAIN}>Главная</TextNavigation>

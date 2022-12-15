@@ -48,8 +48,3 @@ export const useTheme = () => {
 
   return theme;
 };
-
-export const Theme = () => {
-  const t = useTheme();
-  return t;
-};
