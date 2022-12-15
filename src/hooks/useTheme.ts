@@ -8,16 +8,6 @@ const defaultTheme: DefaultTheme = {
       black: '#000',
       white: '#fff',
     },
-
-    background: {
-      default: '',
-      button: '',
-    },
-
-    text: {
-      primary: '',
-      secondary: '',
-    },
   },
 
   typography: {
